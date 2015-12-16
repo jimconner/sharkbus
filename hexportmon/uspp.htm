@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>ibarona - USPP(Universal Serial Port Python Library)</title>
+
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <style type="text/css">
+  #g_title p, #g_footer p, #g_description p {
+    margin: 0;
+  }
+  /*
+
+  	-- -- -- -- -- -- --
+  	Browser Fixes
+  	-- -- -- -- -- -- --
+  	
+  	This file uses CSS filtering methods to fix various
+  	layout bugs.
+
+  	Each of the following three imported files is a 
+  	separate, browser-specific CSS file that keeps all 
+  	hacks out of the main style sheet.
+  	
+  	Over time, as supporting these browsers no longer
+  	remains a priority, cleaning up the hacks is as
+  	easy as deleting the @import statement below, or
+  	simply no longer linking this file from the HTML.
+  	
+  */
+
+  /* 
+    fix ie6 "peekaboo bug" using the "holly hack". 
+    Note, this style only gets applied to ie6
+  */
+  * html .wrapper {
+    height: 0.1%;
+  }
+
+  /* 
+   * IE5 mac - overrides the IE/Win hack 
+   */
+
+  /*\*//*/
+
+  * html #threecolumn div {
+  	height: auto;
+  }
+
+  /**/
+
+
+  /* 
+   * IE5/Win-specific CSS -ensures #container wraps all content on window resize
+   */
+
+  @media tty {
+   i{content:"\";/*" "*/}} * html #container { height: 1%; } /*";}
+  }/* */
+  /* Styling for editable elements. Eventually, this will be part of the style. */
+  .editable {
+    border: 1px dashed blue;
+  }
+  
+  #footer {
+    clear: both;
+  }
+  
+  /* Extra divs hidden by default. The custom CSS can override this though */
+  #extraDiv1, #extraDiv2, #extraDiv3, #extraDiv4, #extraDiv5, #extraDiv6 {
+    display: none;
+  }
+
+  /*
+    -- -- -- -- -- -- --
+    1 Column Layout
+    -- -- -- -- -- -- --
+  */
+
+  /* Center #container, constrain to 718px width
+  ----------------------------------------------- */
+  body {
+    text-align: center;
+  }
+  #container {
+    width: 718px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  #main-content {
+    overflow: hidden;
+  }
+
+  /** BEGIN CUSTOM SKIN **/
+  /*
+
+  	-- -- -- -- -- -- --
+  	Base CSS
+  	-- -- -- -- -- -- --
+  	
+  	This file simply removes default styling on most HTML elements in 
+  	order to reduce the need to later override them.
+  	
+  */
+
+  h1,h2,h3,h4,h5,h6,pre,code,p {font-size: 1em;}
+  dl,li,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input {margin: 0; padding: 0;}
+  a img,:link img,:visited img {border: none;}
+  address {font-style: normal;}/*
+
+  	-- -- -- -- -- -- --
+  	Type Scheme: Deco
+  	-- -- -- -- -- -- --
+  	
+  */
+
+  body {
+  	font: 76% Verdana, sans-serif;
+  }	
+
+  h1, h2, h3, h4, h5, h6, p.description {
+  	font-family: "Trebuchet MS", Trebuchet, sans-serif;
+  }
+  h1 {
+  	font-size: 3em;
+  	font-weight: bold;
+  	letter-spacing: 2px;
+  }
+  h2 {
+  	font-size: 2em;
+  	font-weight: normal;
+  }
+  h3 {
+  	font-size: 1.5em;
+  }
+  h4 {
+  	font-size: 1.2em;
+  	letter-spacing: 0.2em;
+  }
+  h5 {
+  	font-size: 1.2em;
+  }
+  h6 {
+  	font-size: 1em;
+  	font-weight: bold;
+  }
+
+  p, td {
+  	line-height: 1.8em;
+  }
+  code, kbd {
+  	font-size: 1.25em;
+  }/*
+
+  	-- -- -- -- -- -- --
+  	STYLE: Micro
+  	-- -- -- -- -- -- --
+
+  */
+
+
+
+
+  /* ie6win */
+
+  /* IE/Win fixes for various layouts
+  ----------------------------------------------- */
+  * html #onecolumn #header {
+  	margin-right: -3px;
+  }
+  * html #onecolumn #header,
+  * html #twocolumn-left #header, * html #twocolumn-right #header,
+  * html #twocolumn-liquid-left #header, * html #twocolumn-liquid-right #header {
+  	padding-bottom: 1px;
+  }
+  * html #twocolumn-left #main-content, * html #twocolumn-right #main-content {
+  	width: 459px;
+  }
+  * html #threecolumn #main-content {
+  	width: 409px;
+  }
+
+  /* ie5mac */
+
+  /*\*//*/
+  /* Undoing IE/Win fixes
+  ----------------------------------------------- */
+  * html #onecolumn #header {
+  	margin-right: 0;
+  }
+  * html #twocolumn-left #header, * html #twocolumn-right #header,
+  * html #twocolumn-liquid-left #header, * html #twocolumn-liquid-right #header {
+  	padding-bottom: 0;
+  }
+  * html #twocolumn-left #main-content, * html #twocolumn-right #main-content {
+  	width: 479px;
+  }
+  * html #threecolumn #main-content {
+  	width: 429px;
+  }
+  /**/
+
+  @media tty {
+   i{content:"\";/*" "*/}} td { font-size: 0.8em; } /*";}
+  }/* */
+
+
+
+  /* Basic HTML style
+  ----------------------------------------------- */
+  body {
+  	font: 76% "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  	color: #000;
+  	background: #fff;
+  	margin: 0;
+  	padding: 0;
+  }
+  blockquote {
+  	margin: 1em 2em;
+  	font-style: italic;
+  }
+  caption {
+  	font-weight: bold;
+  	color: #444;
+  	background: #ccc;
+  	border-bottom: 0;
+  	padding: 0.3em 1em;
+  }
+  dd {
+  	margin: 1em 2em;
+  }
+  dl {
+  	margin: 2em 0;
+  }
+  dt {
+  	font-weight: bold;
+  }
+  hr {
+  	margin: 2em 0;
+  	color: #C7C7C7;
+  	background: #C7C7C7;
+  	border-color: #C7C7C7;
+  	border-style: none;
+  	height: 1px;
+  }
+  li {
+  	margin: 1em 0;
+  }
+  table {
+  	border: solid 1px #ccc;
+  }
+  td {
+  	vertical-align: top;
+  	padding: 0.5em;
+  }
+  th {
+  	text-align: left;
+  	color: #fff;
+  	background: #777;
+  	padding: 0.5em;
+  }
+  ol, ul {
+  	margin: 2em 0;
+  	padding-left: 1em;
+  }
+
+
+
+  /* Nested HTML elements, and basic classes
+  ----------------------------------------------- */
+  ol li {
+  	list-style-type: decimal;
+  	margin-left: 2em;
+  }
+  ul li {
+  	margin-left: 2em;
+  	list-style-type: square;
+  }
+  td p {
+  	margin-top: 0;
+  }
+
+
+
+  /* Set the stage with main layout tweaks
+  ----------------------------------------------- */
+  #container {
+  	border: solid 7px #999;
+  	border-left: 0;
+  	border-right: 0;
+  	padding-top: 1px;
+  }
+  #header {
+  	color: #04172D;
+  	border-top: solid 3px #777;
+  	padding: 0;
+  	margin: 0 0 1.5em 0;
+  }
+  #main-content .wrapper {
+  	margin: 0;
+  }
+  .description {
+  	font: normal 1em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  	color: #444;
+  	background: #C7C7C7;
+  	padding: 3px 25px 2.2em 25px;
+  	margin: 0;
+  	line-height: 1;
+  }
+  #footer {
+  	clear: both;
+  	color: #999;
+  	padding: 0 1em 1em 1em;
+  	border-bottom: solid 3px #777;
+  	margin-bottom: 1px;
+  }
+
+
+  /* Content area offset
+  ----------------------------------------------- */
+  #main-content .wrapper {
+  	padding: 0 25px;
+  }
+
+  #main-content td p {
+  	margin: 0 0 1em 0;
+  }
+
+
+
+  /* Custom font definitions
+  ----------------------------------------------- */
+  p {
+  	margin: 1em 0;
+  	line-height: 1.5;
+  }
+  h1,h2,h3,h4,h5,h6 {
+  	font-family: "Trebuchet MS", arial, sans-serif;
+  }
+  h1 {
+  	color: #B2B2B2;
+  	font-size: 2.4em;
+  	letter-spacing: 0.2em;
+  	font-weight: normal;
+  	padding: 1em 25px 0 25px;
+  }
+  h2 {
+  	margin: 0 0 0.5em 0;
+  	color: #777;
+  	font-size: 1.4em;
+  	font-weight: normal;
+  	border-bottom: double 3px #C7C7C7;
+  	padding: 0 0 0.4em 0;
+  }
+  h3 {
+  	font-size: 1.2em;
+  	background: #eee;
+  	border: dotted 1px #C7C7C7;
+  	padding: 0.2em;
+  }
+  h4 {
+  	font-size: 1.2em;
+  	padding: 0 0 0.2em 0;
+  	margin: 0.6em 0 0 0.4em;
+  	color: #777;
+  }
+  h5 {
+  	border-bottom: dotted 1px #C7C7C7;
+  }
+  h6 {
+  	color: #777;
+  	border-left: solid 1.2em #777;
+  	padding-left: 0.6em;
+  }
+
+  a:link {
+  	color: #9db2df;
+  }
+  a:hover {
+    	text-decoration: none;
+  	border-bottom: 1px dotted #bb242d;
+  	background-color: #e0e0e0;
+   }
+
+
+  /* Sidebar
+  ----------------------------------------------- */
+  #sidebar h3, #sidebar-alternate h3 {
+  	margin: 0;
+  	color: #777;
+  	background: none;
+  	font-size: 1.4em;
+  	font-weight: normal;
+  	border: none;
+  	padding: 0;
+  }
+
+  #sidebar blockquote, #sidebar blockquote p,
+  #sidebar-alternate blockquote, #sidebar-alternate blockquote p {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+  #sidebar blockquote {
+  	margin: 1em 0;
+  	padding: 0;
+  }
+  #adsense {
+  	text-align: center;
+  }
+
+
+
+  .editable {
+  	border: dashed 1px #c33;
+  }
+
+
+
+
+  /* Tweaks for Two-column Right layout
+  ----------------------------------------------- */
+  #twocolumn-right #sidebar .wrapper {
+  	margin: 0 10px;
+  }
+
+
+
+  /* Tweaks for Two-column Left layout
+  ----------------------------------------------- */
+  #twocolumn-left #sidebar .wrapper {
+  	margin: 0 10px;
+  }
+
+
+  /* Tweaks for Three-column layout
+  ----------------------------------------------- */
+  #threecolumn #sidebar .wrapper {
+  	margin: 0 10px;
+  }
+  #threecolumn #sidebar-alternate .wrapper {
+  	margin: 0 10px;
+  }
+  /*
+
+  	-- -- -- -- -- -- --
+  	COLOR SCHEME: Blueprint
+  	-- -- -- -- -- -- --
+
+  */
+
+
+  /* Basic HTML style
+  ----------------------------------------------- */
+  a:link {
+  	color: #445AA9;
+  }
+  a:visited {
+  	color: #283D88;
+  }
+  body {
+  	color: #283769;
+  	background: #ECEEF6;
+  }
+  caption {
+  	color: inherit;
+  	background: #ECEEF6;
+  }
+  hr {
+  	color: #C7C7C7;
+  	background: #C7C7C7;
+  	border-color: #C7C7C7;
+  }
+  table {
+  	background: #fff;
+  	border-color: #B3BCDC;
+  }
+  th {
+  	color: #fff;
+  	background: #445AA9;
+  }
+
+
+
+  /* Set the stage with main layout tweaks
+  ----------------------------------------------- */
+  #container {
+  	background-color: #F6F7FB;
+  	border-color: #6678B8;
+  }
+  #header {
+  	color: #445AA9;
+  	border-top-color: #6678B8;
+  }
+  .description {
+  	color: #445AA9;
+  	background: #C9D0E6;
+  }
+  #footer {
+  	color: #5064AE;
+  	border-bottom-color: #6678B8;
+  }
+
+
+
+  /* Custom font definitions
+  ----------------------------------------------- */
+  h1 {
+  	color: #445AA9;
+  }
+  h2 {
+  	color: #5064AE;
+  	border-bottom-color: #B3BCDC;
+  }
+  h3 {
+  	background: #ECEEF6;
+  	border-color: #C9D0E6;
+  }
+  h4 {
+  	border-bottom-color: #B3BCDC;
+  	color: #1A4292;
+  }
+  h5 {
+  	border-bottom-color: #C7C7C7;
+  }
+  h6 {
+  	color: #5064AE;
+  	border-left-color: #B3BCDC;
+  }
+
+
+
+
+
+  /* Sidebar
+  ----------------------------------------------- */
+  #sidebar h3, #sidebar-alternate h3 {
+  	color: #5064AE;
+  	background: none;
+  }
+  /** END CUSTOM SKIN **/
+  </style><!-- Hack to avoid flash of unstyled content in IE -->
+
+  
+  <script> </script></head><body id="onecolumn">
+  <div id="container">
+    <div class="wrapper">
+      <div id="header">
+        <div class="wrapper">
+          <h1 id="page-title"><div id="g_title">USPP(Universal Serial Port Python Library)<br></div></h1>
+          <div style="clear: both;"></div>
+          <p class="description"></p><div id="g_description"><p>Isaac Barona (ibarona@gmail.com)&nbsp;</p></div>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+      
+      <div id="main-content">
+        <div class="wrapper">
+          <div class="content-item"><div id="g_body"><h2>Introduction</h2><p><i>USPP Library </i>is a multi-platform Python module to access serial ports.
+At the moment, it only works in Windows, Linux and MacOS but as it is written entirely in Python (doesn't wrap any C/C++ 
+library) I hope you can extend it to support any other platforms.&nbsp;</p><h2>Motivation</h2><p>
+I like very much to make electronic widgets with microcontrollers, specially
+those that can be connected to the computer to send and receive data.
+</p><p>Some months ago, I discovered Python and inmediatelly liked it a lot. 
+I started playing with it and saw that I could use it to make prototypes of
+comunication protocols between computer and microcontrollers really
+fast and easily than using C. At the same time, I was interested in
+working over different platforms.
+</p><p>I started looking for Python modules to access serial port and I found
+the following projects:
+</p><ul><li><i>win32comport_demo</i> from the win32 extension module</li><li><i>win32comm</i> module of wheineman@uconect.net</li><li><i>Sio Module </i>of Roger Rurnham (rburnham@cri-inc.com)</li><li><i>pyxal (Python X10 Abstraction Layer) </i>of Les Smithson (lsmithson@open-networks.co.uk)</li></ul><p>but they were not multi-platform, were just a wrap of propietary libraries or 
+were just simple examples of serial port access.
+</p><p>For these reasons and also for learning more Python, I decided to start
+this project. Of course, I have used all this projects as reference to
+my module and so, I want to thanks the authors for their excellent work and
+for allowing us to study the code.
+I hope you enjoy using the uspp module as much as I am enjoying doing it.</p><h2>Features</h2><p>
+This module has the following features:
+</p><ul><li>hight level access to serial port under several platforms.</li><li>autodetects the platform in which it is working and exports the correct 
+classes for that platform.</li><li>object oriented approach.</li><li>file object semantic operations over the ports.</li><li>allows using the serial port with different speeds and
+characteristics.</li><li>RS-232 and RS-485 modes (now only RS-232). In RS-485 mode the communication
+is half-duplex and uses the RTS line to control the direction of the 
+transference.</li><li>blocking, non-blocking or configurable timeout reads.</li></ul><h2>&nbsp;Prerequisites</h2><p>You need the following to use the library:
+</p><ul><li>Python 2.1 or better</li><li>In windows you need the win32 extension modules. You can get it from <a href="http://sourceforge.net/projects/pywin32/">here</a>.<br></li></ul><h2>Usage and documentation</h2><p>You only have to import in your program the <i>uspp</i> module and automatically
+it loads the correct classes for the platform in which you are running
+the program.
+
+</p><p>First of all you have to create a <i>SerialPort</i> object with the settings you
+want. If a <i>SerialPortException</i> is not generated then you just can
+use the read and write methods of the object to read and write to
+the serial port.
+
+</p><p>Example:
+
+</p><pre><tt><br>&gt;&gt;&gt; from uspp import *<br>&gt;&gt;&gt; tty=SerialPort("COM2", 1000, 9600)  <br>&gt;&gt;&gt; # Opens COM2 at 9600 bps and with a read timeout of 1 second.<br>&gt;&gt;&gt; tty.write("a")  # Writes a character to the COM2 port<br>&gt;&gt;&gt; # Now suppose we receive the string "abc"<br>&gt;&gt;&gt; tty.inWaiting()<br>3<br>&gt;&gt;&gt; tty.read()<br>'a'<br>&gt;&gt;&gt; tty.inWaiting()<br>2<br>&gt;&gt;&gt; tty.read(2)<br>'bc'<br></tt></pre>
+
+<p>Documentation of the different classes and methods can be found on
+uspp module docstring.</p><h2>Where does it works?&nbsp;</h2><p>&nbsp;
+The library has been tested in&nbsp; Windows 95, Windows XP and Windows 2000&nbsp; machines with Python 2.0+
+and in a Linux (2.0.34 and 2.4.20 kernels) machine with Python 2.1+.</p><h2>Porting to other frameworks</h2><p>
+If you want to port the library to other platforms you only have to follow
+these steps:
+</p><ul><li>Create a new python file called <i>SerialPort_XXXX.py </i>in which you 
+implement the same public classes and methods found in the
+<i>SerialPort_win</i>
+and <i>SerialPort_linux</i> modules.</li><li>Append the new platform to the <i>uspp.py</i> file.</li></ul><h2>License&nbsp;</h2><p>&nbsp;
+This code is released under the "GPL" that can be found in
+<a href="http://www.gnu.org/copyleft/gpl.html%20">http://www.gnu.org/copyleft/gpl.html </a>or in the GPL.txt file that 
+is with the library.
+</p><p>If you use this software, I'd like to know about it.</p><h2>&nbsp;Author</h2><p>
+This library has been created by Isaac Barona Martínez 
+<a href="mailto:ibarona%20at%20gmail.com">(ibarona at gmail.com)</a>&nbsp;</p><h2>Versions <br></h2><h3>Version 1.0 - 02/24/2006 (February 2006) &nbsp;&nbsp;&nbsp;</h3><p>Lot
+to time after 0.1 version I have enouth time to publish the final
+version of the library. This version correct some bugs of 0.1 version,
+works in MacOS and have been extended.</p><p>The library contains more functions in Linux and MacOS platforms than in Windows platform.&nbsp;</p><p>I have to thanks a lot of people his contribution to the library, especially:</p><ul><li>Damien Geranton &lt;dgeranton at voila.fr&gt;&nbsp;</li><li>Douglas Jones &lt;dfj23 at drexel.edu&gt;</li><li>&nbsp;J.Grauheding &lt;juergen.grauheding at a-city.de&gt; </li></ul><p>&nbsp;Files:</p><ul><ul><li>Zip file:  uspp-0_1.zip</li><li>tar.gz file:  uspp-0_1.tar.gz</li></ul></ul><h4>&nbsp;</h4><h3>Version 0.1 - 09/01/2001 (September 2001)</h3><p></p></div></div>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+      
+      <div id="footer"><div class="wrapper">
+        <hr>
+        <p></p><div id="g_footer">&nbsp;</div>
+        <div style="clear: both;"></div>
+      </div></div>
+      
+    </div>
+  </div>
+
+
+<div id="extraDiv1"><span></span></div><div id="extraDiv2"><span></span></div>
+<div id="extraDiv3"><span></span></div><div id="extraDiv4"><span></span></div>
+<div id="extraDiv5"><span></span></div><div id="extraDiv6"><span></span></div>
+
+</body></html>

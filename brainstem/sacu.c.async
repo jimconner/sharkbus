@@ -1,0 +1,219 @@
+      #include <termios.h>
+      #include <stdio.h>
+      #include <unistd.h>
+      #include <fcntl.h>
+      #include <sys/signal.h>
+      #include <sys/types.h>
+      #include <stdlib.h>
+      #include <string.h>
+        
+      #define BAUDRATE B38400
+      #define MODEMDEVICE "/dev/ttyS1"
+      #define _POSIX_SOURCE 1 /* POSIX compliant source */
+      #define FALSE 0
+      #define TRUE 1
+
+      void handle_incoming (unsigned char buf[255], int res);
+      void handle_sharkbus (unsigned char smbuf[255], int length);
+      void sendmessage (unsigned char msgtype, unsigned char outbuf[32], unsigned char length);
+        
+      volatile int STOP=FALSE; 
+        
+      void signal_handler_IO (int status);   /* definition of signal handler */
+      int wait_flag=TRUE;                    /* TRUE while no signal received */
+      int sharkready=FALSE;                    /* TRUE when there is a new SharkBus message received and ready to process */
+      unsigned char sharkmsg[64]="";
+      int sharkmsg_len = 0;
+      	int fd, res;
+
+      void main()
+      {
+        struct termios oldtio,newtio;
+        struct sigaction saio;           /* definition of signal action */
+        unsigned char buf[255];
+        
+        /* open the device to be non-blocking (read will return immediatly) */
+        fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY | O_NONBLOCK);
+        if (fd <0) {perror(MODEMDEVICE); exit(-1); }
+        
+        /* install the signal handler before making the device asynchronous */
+        saio.sa_handler = signal_handler_IO;
+        //saio.sa_mask = 0; //original doesn't compile
+	sigemptyset(&saio.sa_mask);   //saio.sa_mask = 0;
+	//memset(&saio.sa_mask, 0, sizeof(sigset_t)); // compiles ;)
+
+        saio.sa_flags = 0;
+        saio.sa_restorer = NULL;
+        sigaction(SIGIO,&saio,NULL);
+          
+        /* allow the process to receive SIGIO */
+        fcntl(fd, F_SETOWN, getpid());
+        /* Make the file descriptor asynchronous (the manual page says only 
+           O_APPEND and O_NONBLOCK, will work with F_SETFL...) */
+        fcntl(fd, F_SETFL, FASYNC);
+        
+        tcgetattr(fd,&oldtio); /* save current port settings */
+        /* set new port settings for non-canonical input processing */
+        newtio.c_cflag = BAUDRATE | CS8 | CLOCAL | CREAD | CSTOPB;
+        newtio.c_iflag = IGNPAR | ICRNL;
+        newtio.c_lflag &= ~(ICANON | ECHO | ECHOE | ISIG); 
+        //newtio.c_lflag = 0;
+        newtio.c_oflag = 0;
+        newtio.c_cc[VMIN]=0;
+        newtio.c_cc[VTIME]=0;
+        tcflush(fd, TCIFLUSH);
+        tcsetattr(fd,TCSANOW,&newtio);
+         
+        /* loop while waiting for input. normally we would do something
+           useful here */ 
+        while (STOP==FALSE) {
+          //usleep(100000);
+          //outbuf[0] = sensor;
+          //outbuf[1] = 0x54;
+	  //res=write(fd, outbuf, strlen(outbuf));
+          //usleep(100000);
+          //printf("%i: ", sensor);
+	  //sensor=sensor+1;
+	  if (sharkready==TRUE) {
+		sharkready=FALSE;
+	  	handle_sharkbus(sharkmsg, sharkmsg_len);
+	  }
+          printf(".");usleep(1000000);
+          /* after receiving SIGIO, wait_flag = FALSE, input is available
+             and can be read */
+          if (wait_flag==FALSE) { 
+            res = read(fd,buf,255);
+            buf[res]=0;
+	    if (res>0) {
+		printf("Res: %i\n", res);
+	    	handle_incoming(buf, res);}
+            //if (res==1) STOP=TRUE; /* stop loop if only a CR was input */
+            wait_flag = TRUE;      /* wait for new input */
+          }
+        }
+        /* restore old port settings */
+        tcsetattr(fd,TCSANOW,&oldtio);
+      }
+        
+      /***************************************************************************
+      * signal handler. sets wait_flag to FALSE, to indicate above loop that     *
+      * characters have been received.                                           *
+      ***************************************************************************/
+      void signal_handler_IO (int status)
+      {
+        //printf("received SIGIO signal.\n");
+        wait_flag = FALSE;
+
+      }
+
+ 
+      /*******************************************************************
+      * Process the incoming serial bytes from the buffer into Sharkbus  * 
+      * messages - Each is terminated with 0x0f - When we've got a valid *
+      * SharkBus message, we call the SharkBus handler. 	         *
+      *******************************************************************/
+      void handle_incoming (unsigned char buf[255], int res)
+      {
+	//int n;
+	//for(n=0; buf[n] ; n++)
+	//	printf("%x ",buf[n]);
+	if (buf[res-1]==0x0f) { 
+		memcpy(sharkmsg+sharkmsg_len, buf, 8);
+		sharkmsg_len += res;
+		sharkready = TRUE;
+		//handle_sharkbus(sharkmsg, sharkmsg_len);
+		sharkmsg_len = 0;
+
+	} else {
+		memcpy(sharkmsg+sharkmsg_len, buf, 8);
+		sharkmsg_len += res;
+	}
+      }
+
+      /*******************************************************************
+      * Process the incoming serial bytes from the buffer into Sharkbus  * 
+      * messages - Each is terminated with 0x0f - When we've got a valid *
+      * SharkBus message, we call the SharkBus handler. 	         *
+      *******************************************************************/
+      void handle_sharkbus (unsigned char smbuf[255], int length)
+      {
+	int n, msgtype;
+        unsigned char outbuf[255]="";
+	printf("Len %i | ", length);
+	for(n=0; smbuf[n] ; n++)
+		printf("%2.2x ",smbuf[n]);
+	//printf("\n");
+	msgtype = (smbuf[0] & 0x0f);	
+	//if (msgtype==0) { printf("SR General Info\n"); }
+	//if (msgtype==1) { printf("SPM General Info\n"); }
+	//if (msgtype==2) { printf("SR HHP Data\n"); }
+	//if (msgtype==3) { printf("SPM HHP Data\n"); }
+	//if (msgtype==4) { printf("SR Power Up Info\n"); }
+	//if (msgtype==5) { printf("SPM Power Up Info\n"); }
+	//if (msgtype==6) { printf("Joystick Calibration\n"); }
+	//if (msgtype==7) { printf("Factory Test\n"); }
+	//if (msgtype==8) { printf("SACU General Information\n"); }
+	//if (msgtype==9) { printf("SACU Power Up Information\n"); }
+	//if (msgtype==10) { printf("SPM Programmable Settings\n"); }
+	switch (msgtype)
+	{
+	 case 0:
+		printf("SR General Info\n");
+		break;
+	 case 1:
+		printf("SPM General Info\n");
+		printf("Sending SACU General Info - ");
+          	outbuf[0] = 0xc0;
+          	outbuf[1] = 0xc0;
+          	outbuf[2] = 0xFF;
+          	outbuf[3] = 0xC0;
+          	outbuf[4] = 0x84;
+          	outbuf[5] = 0x80;
+		sendmessage(8, outbuf, 6);
+		break;
+	 case 4:
+		printf("SP Power Up Info\n");
+		break;
+	 case 5:
+		printf("SPM Power Up Info\n");
+		printf("Sending SACU Power Up Info - ");
+          	outbuf[0] = 0x8a;
+          	outbuf[1] = 0x89;
+          	outbuf[2] = 0xde;
+          	outbuf[3] = 0xad;
+          	outbuf[4] = 0xc5;
+          	outbuf[5] = 0xa5;
+          	outbuf[6] = 0x82;
+		sendmessage(9, outbuf, 7);
+		break;
+	 default:
+		printf("Huh!\n");
+		break;
+	}	
+
+      }
+
+      void sendmessage (unsigned char msgtype, unsigned char outbuf[32], unsigned char length)
+      {
+	int n, wres;
+	unsigned char firstbyte, parity=0, sendbuf[32]="";
+	firstbyte=msgtype+((length-1)<<4);
+
+	sendbuf[0]=firstbyte;
+	//printf("FB: %x\n", firstbyte);
+	parity=firstbyte&127;
+	for(n=0; n < length; n++) {
+		parity+=(outbuf[n]&127);
+		sendbuf[n+1]=outbuf[n];
+		//printf("%x ", outbuf[n]);
+	   }
+	parity = (255-(parity & 127));
+	//parity = 0xe4;
+	sendbuf[n+1]=parity;
+	sendbuf[n+2]=0x0f;
+	for(n=0; n < length+3; n++) 
+		printf("%2.2x ", sendbuf[n]);
+	printf("\n");	
+	wres=write(fd, &sendbuf, length+3);
+	printf("Write result: %i\n", wres);
+      } 

@@ -1,0 +1,654 @@
+Res: 1
+Res: 8
+Res: 3
+Len 12 | 00 74 82 89 85 80 ad ea a5 82 bd 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 1
+Len 2 | ff 0f Huh!
+Res: 8
+Res: 3
+Len 11 | 74 82 89 85 80 ad ea a5 82 bd 0f SR Power Up Info
+Res: 3
+Res: 1
+Len 4 | 05 82 f8 0f SPM Power Up Info
+Sending SACU Power Up Info - 69 8a 89 de ad c5 a5 82 8c 0f 
+Write result: 10
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 7
+Len 7 | ff ff ff ff ff 8e 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 7
+Res: 1
+Len 9 | ff 80 80 ce 1a 85 a7 b9 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff 9c fe 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff 07 1c 70 e3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff ff ff 70 e7 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff 72 c0 80 ce 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Len 3 | 80 ce 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff c8 80 80 ce 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff ff ff c0 8e 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff 72 c0 80 8e 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 7
+Len 7 | ff ff ff ff 80 8e 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff c8 80 80 f3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Len 3 | 80 f3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9f 80 8c 80 f6 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff 03 6e fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 2
+Len 2 | b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff e0 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff ff f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff 1c 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff 0e 38 60 d9 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Res: 1
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 7
+Res: 1
+Len 8 | ff ff e0 90 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff 37 ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 4
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff 6e fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 6
+Len 6 | ff ff 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9f 80 8c 80 f6 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff 37 ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Res: 1
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff ff ff b8 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9f 80 8c 80 f6 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff 0e 1c 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9f 80 8c 80 f6 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff e0 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 88 80 8c 80 8c 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | ff ff ff ff ff 39 e0 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 89 80 8c 80 8b 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 06 dc f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 5
+Len 6 | ff 90 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Len 3 | 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 2
+Res: 1
+Len 3 | ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Len 3 | 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9e 80 8c 80 f7 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9e 80 8c 80 f7 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 0e b8 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff ff f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff e0 c0 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 2
+Len 2 | b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 91 80 8c 80 83 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 4
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 91 80 8c 80 83 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff ff f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 70 c0 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 9e 80 8c 80 f7 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 7
+Len 7 | ff ff ff 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 96 80 8c 80 ff 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 5
+Res: 1
+Len 7 | ff b3 1a 85 a7 b9 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 4
+Len 5 | ff 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff 93 ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 4
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | f9 ff ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff 6e fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 6
+Len 6 | ff ff ff ff d3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Res: 1
+Len 10 | ff ff ff ff ff ff ff ff fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 3
+Res: 1
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 1
+Len 2 | ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 4
+Len 4 | ff 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 5
+Len 5 | 90 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 07 dc f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 3
+Len 4 | ff 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff 07 4c fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff ff fb 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 38 70 f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Len 8 | ff ff ff ff ff ff f6 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff 70 e0 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 2
+Len 3 | ff b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 4
+Len 4 | 80 80 b3 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 2
+Len 2 | b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff c0 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 1
+Res: 2
+Len 3 | ff b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80 fe 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 5
+Len 5 | ff 80 80 b3 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf c0 80 90 80 8c 80 84 0f SR General Info
+Sending SACU General Info - 58 c0 c0 ff c0 84 80 e4 0f 
+Write result: 9
+Res: 8
+Res: 1
+Len 9 | ff ff ff ff ff ff 37 ff 0f Huh!
+Res: 8
+Res: 2
+Len 10 | 60 bf bf 80 97 80 8c 80
