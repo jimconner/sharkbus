@@ -17,8 +17,6 @@ slot will result in the wheelchair going into an error condition and refusing to
 
 Hope this repo helps someone out.
 
-Also... @uhi22 shared a link for work on an alternative Invacare protocol DX-Bus within the 'Issues' - I'm including the link here on the main README.md so that it's a bit more visible.
+Also... @uhi22 shared the following link for work on an alternative Invacare protocol DX-Bus within the 'Issues' - I'm including the link here on the main README.md so that it's a bit more visible.
 
-Regarding the DX-BUS, started some investigations and documentation here: https://github.com/uhi22/invacare-g50-investigations
-The DX-BUS looks quite different to the sharkbus.
-(I know this is an quite old issue, but maybe the link helps other people to find the more recent information.)
+@uhi22: Regarding the DX-BUS, started some investigations and documentation here: https://github.com/uhi22/invacare-g50-investigations
